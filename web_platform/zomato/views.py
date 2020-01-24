@@ -13,5 +13,9 @@ def signin(request):
 def signup(request):
     template = loader.get_template('zomato/signup.html')
     return HttpResponse(template.render())
+
+def home(request):
+    template = loader.get_template('zomato/home.html')
+    return HttpResponse(template.render())
 # Create your views here.
 
