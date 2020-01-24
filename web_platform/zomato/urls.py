@@ -9,4 +9,7 @@ urlpatterns = [
     path('userprofile/', views.userprofile, name="userprofile"),
     path('restaurant/', views.restaurant, name="restaurant"),
     path('dashboard/', views.dashboard, name="dashboard"),
+    path('feed/', views.feed, name="feed"),
+    path('order/', views.order, name="order"),
+    path('c_post/', views.c_post, name="c_post"),
 ]

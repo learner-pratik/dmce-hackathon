@@ -9,6 +9,11 @@ from django.db import models
 
 
 #new db
+class login(models.Model):
+	username = models.CharField(max_length=200)
+	password = models.CharField(max_length = 200)
+	def __str__(self):
+		return self.username
 
 class User(models.Model):
     user_id=models.CharField(max_length=254)
