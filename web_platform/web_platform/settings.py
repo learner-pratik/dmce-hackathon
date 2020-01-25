@@ -22,10 +22,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ce62ad6s0-rr*f$cg^+56u$5i2mhk33f%%ener3aav&%4*4688'
 
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+SOCIAL_AUTH_FACEBOOK_KEY = 165644708061662        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '7d84a1080af3b42e9aa411fc538a5587'  # App Secret
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] # add this
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
+  'fields': 'id, name, email, picture.type(large), link'
+}
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['347c9674.ngrok.io']
 
 
 # Application definition
@@ -38,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.contrib.auth.backends.ModelBackend',
 ]
 
 ROOT_URLCONF = 'web_platform.urls'
@@ -63,12 +74,22 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'web_platform.wsgi.application'
+
+# social media authentications
+AUTHENTICATION_BACKENDS = [
+        'social_core.backends.linkedin.LinkedinOAuth2',
+        'social_core.backends.instagram.InstagramOAuth2',
+        'social_core.backends.facebook.FacebookOAuth2',
+        'django.contrib.auth.backends.ModelBackend',
+    ]
 
 
 # Database

@@ -20,6 +20,7 @@
         }
         #card{
             height: 18%;
+            max-width: 80%;
             margin-top: 20px;
             padding: 30px;
             background-color: #ee4c7c;
@@ -28,12 +29,32 @@
             width: 90%;
             height: 90%;
         }
-        
+        .navbar-custom { 
+            background-color: #5d001e; 
+        }
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .navbar-text { 
+            color: green; 
+        }
+        .jumbotron{
+            background-color: #e3afbc;
+            color: #5d001e;
+            font-size: 30px;
+            /* background-color:transparent !important; */
+        }
+        #order{
+            background-color: #9a1750;
+            color: white;
+        }
+        #more{
+            background-color: #9a1750;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <h1 class="navbar-brand" style="color: lightcyan;">Zomato</h1>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,86 +62,83 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Home <span class="sr-only">(current)</span></a></h3>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Feeds</a></h3>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
+                <li class="nav-item my-2 my-lg-0" id="profile">
+                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Profile</a></h3>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav>
-    <div class="container text-center" id="card">
+    <div class="container-fluid">
+
+    <div class="container" id="card">
         <div class="row">
             <div class="col-md-4">
                 <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-786355,resizemode-1,msid-70709213/1200-restaurants-delist-themselves-from-dine-in-programmes-of-zomato-eazydiner-others-across-india.jpg" alt="My image" id="restaurant">
             </div>
             <div class="col-md-8">
-                <div class="jumbotron">
+                <div class="jumbotron text-center">
                     <h1 class="display-5">Restaurant Name</h1>
                     <p class="lead">Location</p>
                     <hr class="my-2">
                     <p>Description</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Order Now</a>
+                        <a class="btn btn-lg" id="order" href="Jumbo action link">Order Now</a>
                     </p>
                     <form action="" method="post">
-                        <input type="button" value="MORE INFO" class="btn btn-secondary btn-lg">
+                        <input type="button" id="more" value="MORE INFO" class="btn btn-lg">
                     </form>
                 </div>
             </div>
         </div>
-        <br><br>
+    </div>
+    <div class="container" id="card">
         <div class="row">
             <div class="col-md-4">
                 <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-786355,resizemode-1,msid-70709213/1200-restaurants-delist-themselves-from-dine-in-programmes-of-zomato-eazydiner-others-across-india.jpg" alt="My image" id="restaurant">
             </div>
             <div class="col-md-8">
-                <div class="jumbotron">
+                <div class="jumbotron text-center">
                     <h1 class="display-5">Restaurant Name</h1>
                     <p class="lead">Location</p>
                     <hr class="my-2">
                     <p>Description</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Order Now</a>
+                        <a class="btn btn-lg" id="order" href="Jumbo action link">Order Now</a>
                     </p>
                     <form action="" method="post">
-                        <input type="button" value="MORE INFO" class="btn btn-secondary btn-lg">
+                        <input type="button" id="more" value="MORE INFO" class="btn btn-lg">
                     </form>
                 </div>
             </div>
         </div>
-        <br><br>
+    </div>
+    <div class="container" id="card">
         <div class="row">
             <div class="col-md-4">
                 <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-786355,resizemode-1,msid-70709213/1200-restaurants-delist-themselves-from-dine-in-programmes-of-zomato-eazydiner-others-across-india.jpg" alt="My image" id="restaurant">
             </div>
             <div class="col-md-8">
-                <div class="jumbotron" id="description">
+                <div class="jumbotron text-center">
                     <h1 class="display-5">Restaurant Name</h1>
                     <p class="lead">Location</p>
                     <hr class="my-2">
                     <p>Description</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Order Now</a>
+                        <a class="btn btn-lg" id="order" href="Jumbo action link">Order Now</a>
                     </p>
                     <form action="" method="post">
-                        <input type="button" value="MORE INFO" class="btn btn-secondary btn-lg">
+                        <input type="button" id="more" value="MORE INFO" class="btn btn-lg">
                     </form>
                 </div>
             </div>
         </div>
-        <br><br>
+    </div>
+    
     </div>
 </body>
 </html>

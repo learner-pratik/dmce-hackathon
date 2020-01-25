@@ -4,17 +4,19 @@
 <head>
 
     <style>
-        * {
+        html{
             margin: 0;
             padding: 0;
             font-family: "montserrat", sans-serif;
+            background-color: #9a1750;
         }
-
         .contact-section h1 {
             text-align: center;
             color: #0B0C10;
         }
-
+        .contact-section{
+            background-color: #9a1750;
+        }
         .border {
             width: 100px;
             height: 10px;
@@ -28,6 +30,7 @@
             margin: auto;
             padding: 0 10px;
             overflow: hidden;
+            /* background-color: #9a1750; */
         }
 
         .contact-form-text {
@@ -41,7 +44,7 @@
             outline: none;
             color: white;
             transition: 0.5s;
-            height: 50px;
+            /* height: 50px; */
         }
 
         .contact-form-text:focus {
@@ -50,7 +53,7 @@
 
         textarea.contact-form-text {
             resize: none;
-            height: 80px;
+            /* height: 80px; */
         }
 
         .contact-form-btn {
@@ -66,6 +69,9 @@
         }
         .contact-form-btn:hover {
             background: #1F2833;
+        }
+        .navbar-custom { 
+            background-color: #5d001e; 
         }
     </style>
 
@@ -89,20 +95,42 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <h1 class="navbar-brand" style="color: lightcyan;">Zomato</h1>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Home <span class="sr-only">(current)</span></a></h3>
+                </li>
+                <li class="nav-item">
+                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Feeds</a></h3>
+                </li>
+                <li class="nav-item my-2 my-lg-0" id="profile">
+                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Profile</a></h3>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="contact-section">
 
-        <h1 style="margin: 20px;">Posts</h1>
+        <h1 style="margin: 20px;">Create a Post</h1>
 
         <hr style="width: 50%;border: 1px solid black; text-align:center;margin-left:25%" align="right">
         <form class="contact-form" action="" method="post">
-            <textarea id="txtArea" rows="10" cols="60" placeholder="What's in your mind?"
+            <textarea id="txtArea" rows="10" cols="60" placeholder="Write a post"
                 class="contact-form-text"></textarea>
             <input type="file" id="myFile" name="filename">
             <input type="submit" class="contact-form-btn" value="Upload">
         </form>
+        <button class="btn btn-primary mb-2">
+            <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Share to facebook</a>
+        </button>
     </div>
-
 
 </body>
 

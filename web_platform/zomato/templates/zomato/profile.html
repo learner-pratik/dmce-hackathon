@@ -19,7 +19,8 @@
             background-color: #9a1750;
         }
         #card{
-            height: 18%;
+            height: 15%;
+            max-width: 80%;
             margin-top: 20px;
             padding: 30px;
             background-color: #ee4c7c;
@@ -30,6 +31,16 @@
         }
         .navbar-custom { 
             background-color: #5d001e; 
+        }        
+        .jumbotron{
+            background-color: #e3afbc;
+            color: #5d001e;
+            font-size: 30px;
+            /* background-color:transparent !important; */
+        }
+        #post_img{
+            height: 50%;
+            width: 50%;
         }
     </style>
 </head>
@@ -54,34 +65,47 @@
             </ul>
         </div>
     </nav>
-    <div class="container text-center" id="card">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-786355,resizemode-1,msid-70709213/1200-restaurants-delist-themselves-from-dine-in-programmes-of-zomato-eazydiner-others-across-india.jpg" alt="My image" id="restaurant">
-            </div>
-            <div class="col-md-8">
-                <div class="jumbotron">
-                    <h1 class="display-5">Restaurant Name</h1>
-                    <p class="lead">Location</p>
-                    <hr class="my-2">
-                    <p>Description</p>
+    <div class="container-fluid">
+        <div class="container" id="card">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://p7.hiclipart.com/preview/355/848/997/computer-icons-user-profile-google-account-photos-icon-account.jpg" alt="My image" id="restaurant">
+                </div>
+                <div class="col-md-9">
+                    <div class="jumbotron text-center">
+                        <h1 class="display-5">User Name</h1>
+                        <p class="lead">Location</p>
+                        <hr class="my-2">
+                        <p>Description</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container text-center">
-            <div class="jumbotron">
-                <h1 class="display-3">Popular cuisines</h1>
-                <ul class="lead">
-                    <p>ABC</p>
-                    <p>ABC</p>
-                    <p>ABC</p>
-                    <p>ABC</p>
-                </ul>
-                <hr class="my-2">
-                <h1><a href="">ORDER NOW</a></h1>
+        <br><br>
+        <div class="container" id="posts">
+            <div class="jumbotron text-center">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" id="post_img">
+                <div class="container"> 
+                <h2>Delicious ice-cream</h2> 
+                </div>
+            </div>
+        </div>
+        <div class="container" id="posts">
+            <div class="jumbotron text-center">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" id="post_img">
+                <div class="container"> 
+                <h2>Delicious ice-cream</h2> 
+                </div>
+            </div>
+        </div>
+        <div class="container" id="posts">
+            <div class="jumbotron text-center">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" id="post_img">
+                <div class="container"> 
+                <h2>Delicious ice-cream</h2> 
+                </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
