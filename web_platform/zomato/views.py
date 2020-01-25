@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
+import requests
 
 def redirect_signin(request):
     response = redirect('signin/')
@@ -37,5 +38,6 @@ def posts(request):
 def feeds(request):
     template = loader.get_template('zomato/feeds.html')
     return HttpResponse(template.render())
+
 # Create your views here.
 
