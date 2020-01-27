@@ -13,6 +13,7 @@
     <!--Fontawesome CDN-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
 
     <style>
         body{
@@ -36,11 +37,25 @@
             background-color: #e3afbc;
             color: #5d001e;
             font-size: 30px;
+            width: 80%;
+            padding: 60px;
             /* background-color:transparent !important; */
         }
         #post_img{
-            height: 50%;
-            width: 50%;
+            height: 90%;
+            width: 90%;
+            margin-left: 35px;
+        }
+        .btn{
+            background-color: #9a1750;
+            color: white;
+        }
+        #rank{
+            margin-top: 100px;
+            font-size: 60px;
+            color: brown;
+            font-family: 'Bangers';
+            font-style: initial;
         }
     </style>
 </head>
@@ -57,10 +72,10 @@
                     <h3><a class="nav-link" style="color: lightcyan;" href="#">Home <span class="sr-only">(current)</span></a></h3>
                 </li>
                 <li class="nav-item">
-                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Feeds</a></h3>
+                    <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:feeds' %}">Feeds</a></h3>
                 </li>
                 <li class="nav-item my-2 my-lg-0" id="profile">
-                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Profile</a></h3>
+                    <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:profile' %}">Profile</a></h3>
                 </li>
             </ul>
         </div>
@@ -71,22 +86,28 @@
                 <div class="col-md-3">
                     <img src="https://p7.hiclipart.com/preview/355/848/997/computer-icons-user-profile-google-account-photos-icon-account.jpg" alt="My image" id="restaurant">
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-6">
                     <div class="jumbotron text-center">
-                        <h1 class="display-5">User Name</h1>
-                        <p class="lead">Location</p>
+                        <h1 class="display-5">Pratik Naik</h1>
+                        <p class="lead">Kalwa</p>
                         <hr class="my-2">
-                        <p>Description</p>
+                        <p>Loves chinese and ice-cream</p>
+                        <a class="btn btn-lg" type="button" href="{% url 'zomato:posts' %}">Create Post</a>
                     </div>
+                </div>
+                <div class="col-md-3" id="rank">
+                    <p>Points: 27</p>
+                    <p>Rank: 4</p>
+                    <a href="{% url 'zomato:mail' %}" type="button" class="btn btn-lg btn-primary">Send referal</a>
                 </div>
             </div>
         </div>
         <br><br>
         <div class="container" id="posts">
-            <div class="jumbotron text-center">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" id="post_img">
+            <div class="jumbotron">
+                <img src="https://i.ndtvimg.com/i/2016-06/noodles-625_625x350_41466064269.jpg" alt="Avatar" id="post_img">
                 <div class="container"> 
-                <h2>Delicious ice-cream</h2> 
+                <h2 style="margin-left: 185px;">Schezwan noddles!!!</h2> 
                 </div>
             </div>
         </div>
@@ -94,15 +115,15 @@
             <div class="jumbotron text-center">
                 <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" id="post_img">
                 <div class="container"> 
-                <h2>Delicious ice-cream</h2> 
+                <h2>Amul ice-cream yummy!!</h2> 
                 </div>
             </div>
         </div>
         <div class="container" id="posts">
             <div class="jumbotron text-center">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" id="post_img">
+                <img src="https://www.oetker.in/Recipe/Recipes/oetker.in/in-en/baking/image-thumb__52711__RecipeDetail/pizza-pollo-arrosto.jpg" alt="Avatar" id="post_img">
                 <div class="container"> 
-                <h2>Delicious ice-cream</h2> 
+                <h2>Pizza!!!!</h2> 
                 </div>
             </div>
         </div>

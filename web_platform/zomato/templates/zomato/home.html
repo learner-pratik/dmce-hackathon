@@ -65,10 +65,10 @@
                     <h3><a class="nav-link" style="color: lightcyan;" href="#">Home <span class="sr-only">(current)</span></a></h3>
                 </li>
                 <li class="nav-item">
-                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Feeds</a></h3>
+                    <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:feeds' %}">Feeds</a></h3>
                 </li>
                 <li class="nav-item my-2 my-lg-0" id="profile">
-                    <h3><a class="nav-link" style="color: lightcyan;" href="#">Profile</a></h3>
+                    <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:profile' %}">Profile</a></h3>
                 </li>
             </ul>
         </div>
@@ -82,16 +82,17 @@
             </div>
             <div class="col-md-8">
                 <div class="jumbotron text-center">
-                    <h1 class="display-5">Restaurant Name</h1>
-                    <p class="lead">Location</p>
+                    <h1 class="display-5">Shradha Hotel</h1>
+                    <p class="lead">Kalwa</p>
                     <hr class="my-2">
                     <p>Description</p>
                     <p class="lead">
-                        <a class="btn btn-lg" id="order" href="Jumbo action link">Order Now</a>
+                        <a class="btn btn-lg" id="order" href="{% url 'zomato:restaurant' %}">Order Now</a>
                     </p>
-                    <form action="" method="post">
+                    <!-- <form action="" method="post">
                         <input type="button" id="more" value="MORE INFO" class="btn btn-lg">
-                    </form>
+                    </form> -->
+                    <a type="button" class="btn btn-lg" id="more" href="{% url 'zomato:restaurant' %}" >MORE_INFO</a>
                 </div>
             </div>
         </div>
@@ -103,16 +104,17 @@
             </div>
             <div class="col-md-8">
                 <div class="jumbotron text-center">
-                    <h1 class="display-5">Restaurant Name</h1>
-                    <p class="lead">Location</p>
+                    <h1 class="display-5">Neopolitan Pizza</h1>
+                    <p class="lead">Thane</p>
                     <hr class="my-2">
                     <p>Description</p>
                     <p class="lead">
-                        <a class="btn btn-lg" id="order" href="Jumbo action link">Order Now</a>
+                        <a class="btn btn-lg" id="order" href="{% url 'zomato:restaurant' %}">Order Now</a>
                     </p>
-                    <form action="" method="post">
+                    <!-- <form action="" method="post">
                         <input type="button" id="more" value="MORE INFO" class="btn btn-lg">
-                    </form>
+                    </form> -->
+                    <a type="button" class="btn btn-lg" id="more" href="{% url 'zomato:restaurant' %}" >MORE_INFO</a>
                 </div>
             </div>
         </div>
@@ -124,16 +126,17 @@
             </div>
             <div class="col-md-8">
                 <div class="jumbotron text-center">
-                    <h1 class="display-5">Restaurant Name</h1>
-                    <p class="lead">Location</p>
+                    <h1 class="display-5">Mamledar Misal</h1>
+                    <p class="lead">Thane</p>
                     <hr class="my-2">
                     <p>Description</p>
                     <p class="lead">
-                        <a class="btn btn-lg" id="order" href="Jumbo action link">Order Now</a>
+                        <a class="btn btn-lg" id="order" href="{% url 'zomato:restaurant' %}">Order Now</a>
                     </p>
-                    <form action="" method="post">
+                    <!-- <form action="" method="post">
                         <input type="button" id="more" value="MORE INFO" class="btn btn-lg">
-                    </form>
+                    </form> -->
+                    <a type="button" class="btn btn-lg" id="more" href="{% url 'zomato:restaurant' %}" >MORE_INFO</a>
                 </div>
             </div>
         </div>

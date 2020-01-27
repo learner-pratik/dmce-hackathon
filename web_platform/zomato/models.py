@@ -9,6 +9,11 @@ from django.db import models
 
 
 #new db
+class login(models.Model):
+    username = models.CharField(max_length=200)
+    password = models.CharField(max_length = 200)
+    def __str__(self):
+        return self.username
 
 class User(models.Model):
     user_id=models.CharField(max_length=254)
@@ -47,22 +52,9 @@ class Posts(models.Model):
     #image=models.ImageField()
     #gitcimage=models.ImageField()
 
-class FacebookStatus(models.Model):
 
-    class Meta:
-        verbose_name_plural = 'Facebook Statuses'
-        ordering = ['publish_timestamp']
 
-    STATUS = (
-        ('draft', 'Draft'),
-        ('approved', 'Approved'),
-    )
-    status = models.CharField(max_length=255, 
-        choices=STATUS, default=STATUS[0][0])
-    publish_timestamp = models.DateTimeField(null=True, blank=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    message = models.TextField(max_length=255)
-    link = models.URLField(null=True, blank=True)
 
-    def __unicode__(self):
-        return self.message
+	
+	
+	

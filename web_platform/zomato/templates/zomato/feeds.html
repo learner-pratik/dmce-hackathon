@@ -12,18 +12,22 @@
   .navbar-custom { 
       background-color: #5d001e; 
   }
-  card {
+  .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
-  width: 40%;
+  width: 100%;
   border-radius: 5px;
   margin-bottom:10px;
+  margin-top: 20px;
 }
 
 button{
-  width:240px;
+  width:360px;
   height:50px;
   margin-bottom:5px;
+  background-color: #e3afbc;
+  font-size: 35px;
+  color: black;
 }
 
 button:hover{
@@ -34,6 +38,9 @@ img {
   border-radius: 5px 5px 0 0;
 }
 
+body{
+  background-color: #9a1750;
+}
 </style>
 </head>
 <body>
@@ -46,13 +53,13 @@ img {
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <h3><a class="nav-link" style="color: lightcyan;" href="#">Home <span class="sr-only">(current)</span></a></h3>
+                <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:home' %}">Home <span class="sr-only">(current)</span></a></h3>
             </li>
             <li class="nav-item">
-                <h3><a class="nav-link" style="color: lightcyan;" href="#">Feeds</a></h3>
+                <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:feeds' %}">Feeds</a></h3>
             </li>
             <li class="nav-item my-2 my-lg-0" id="profile">
-                <h3><a class="nav-link" style="color: lightcyan;" href="#">Profile</a></h3>
+                <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:profile' %}">Profile</a></h3>
             </li>
         </ul>
     </div>
@@ -60,7 +67,25 @@ img {
 
   <div class="container text-center">
     <div class="card">
-      <img src="https://img1.looper.com/img/gallery/who-is-the-strongest-naruto-character-ever/intro-1565897681.jpg" alt="Avatar" style="width:100%">
+      <img src="https://www.oetker.in/Recipe/Recipes/oetker.in/in-en/baking/image-thumb__52711__RecipeDetail/pizza-pollo-arrosto.jpg" alt="Avatar" style="width:100%">
+      <div style="display:inline-block">
+        <button>Like</button>
+        <button>Comment</button>
+        <button>Share</button>
+      </div>
+    </div>
+    <br><br>
+    <div class="card">
+      <img src="https://i.ndtvimg.com/i/2016-06/noodles-625_625x350_41466064269.jpg" alt="Avatar" style="width:100%">
+      <div style="display:inline-block">
+        <button>Like</button>
+        <button>Comment</button>
+        <button>Share</button>
+      </div>
+    </div>
+    <br><br>
+    <div class="card">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51Y5oyVnPvL.jpg" alt="Avatar" style="width:100%">
       <div style="display:inline-block">
         <button>Like</button>
         <button>Comment</button>

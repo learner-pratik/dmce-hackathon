@@ -1,0 +1,132 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+  }
+  /*body{
+     background-image:linear-gradient(to right, #C5C6C7, #1F2833);
+  }*/
+  body{
+            background-color: #9a1750;
+        }
+  .contact-section h1{
+    text-align: center;
+    color: #0B0C10;
+  }
+  .border{
+    width: 100px;
+    height: 10px;
+    background: #C5C6C7;
+    margin: 40px auto;
+    border: none;
+  }
+  .contact-form{
+    max-width: 70vh;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  .contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #0B0C10;
+    padding: 20px 40px;
+    outline: none;
+    color: white;
+    transition: 0.5s;
+    height: 50px;
+  }
+  .contact-form-text:focus{
+    box-shadow: 0 0 10px 4px #0B0C10;
+  }
+  textarea.contact-form-text{
+    resize: none;
+    height: 80px;
+  }
+  .contact-form-btn{
+    float: right;
+    border: 0;
+    background: #45A29E;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+  }
+  .contact-form-btn:hover{
+    background: #1F2833;
+  }
+  .navbar-custom { 
+        background-color: #5d001e; 
+    }
+  
+
+  
+        
+    </style>
+
+
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">  
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+
+  </head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-custom">
+    <h1 class="navbar-brand" style="color: lightcyan;">Zomato</h1>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:home' %}">Home <span class="sr-only">(current)</span></a></h3>
+            </li>
+            <li class="nav-item">
+                <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:feeds' %}">Feeds</a></h3>
+            </li>
+            <li class="nav-item my-2 my-lg-0" id="profile">
+                <h3><a class="nav-link" style="color: lightcyan;" href="{% url 'zomato:profile' %}">Profile</a></h3>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="contact-section">
+
+  <h1 style="margin: 20px;">ORDER</h1>
+  
+  <hr style="width: 50%;border: 1px solid black; text-align:center;margin-left:25%" align="right">
+  <form class="contact-form" method="post">{% csrf_token %}
+    <input type="text" class="contact-form-text" placeholder="FoodItem">
+    <input type="number" class="contact-form-text" placeholder="Price">
+    <textarea class="contact-form-text" placeholder="Address"></textarea>
+    <input type="checkbox" name="Accept Terms" value="Accept Terms">Accept Terms<br>
+    <input type="submit" class="contact-form-btn" value="Send">
+  </form>
+</div>
+
+
+</body>
+{% endblock %}
+</html>

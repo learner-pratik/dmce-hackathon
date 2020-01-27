@@ -22,14 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ce62ad6s0-rr*f$cg^+56u$5i2mhk33f%%ener3aav&%4*4688'
 
-SOCIAL_AUTH_RAISE_EXCEPTIONS = False
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
-SOCIAL_AUTH_FACEBOOK_KEY = 165644708061662        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '7d84a1080af3b42e9aa411fc538a5587'  # App Secret
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] # add this
-SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
-  'fields': 'id, name, email, picture.type(large), link'
-}
+# SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
+# SOCIAL_AUTH_FACEBOOK_KEY = 165644708061662        # App ID
+# SOCIAL_AUTH_FACEBOOK_SECRET = '7d84a1080af3b42e9aa411fc538a5587'  # App Secret
+# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] # add this
+# SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
+#   'fields': 'id, name, email, picture.type(large), link'
+# }
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django',
+    # 'social_django',
 ]
 
 MIDDLEWARE = [
@@ -74,8 +74,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social.apps.django_app.context_processors.backends',
-                'social.apps.django_app.context_processors.login_redirect',
+                # 'social.apps.django_app.context_processors.backends',
+                # 'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -84,12 +84,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'web_platform.wsgi.application'
 
 # social media authentications
-AUTHENTICATION_BACKENDS = [
-        'social_core.backends.linkedin.LinkedinOAuth2',
-        'social_core.backends.instagram.InstagramOAuth2',
-        'social_core.backends.facebook.FacebookOAuth2',
-        'django.contrib.auth.backends.ModelBackend',
-    ]
+# AUTHENTICATION_BACKENDS = [
+#         'social_core.backends.linkedin.LinkedinOAuth2',
+#         'social_core.backends.instagram.InstagramOAuth2',
+#         'social_core.backends.facebook.FacebookOAuth2',
+#         'django.contrib.auth.backends.ModelBackend',
+#     ]
 
 
 # Database
@@ -140,6 +140,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-os.environ['HTTPS'] = "on"
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# os.environ['HTTPS'] = "on"
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'siddesh.pn23@gmail.com'
+EMAIL_HOST_PASSWORD = '9819208980'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False

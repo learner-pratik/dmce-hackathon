@@ -18,18 +18,17 @@
         body{
             background-color: #9a1750;
         }
-        #card{
-            height: 18%;
-            margin-top: 20px;
-            padding: 30px;
-            background-color: #ee4c7c;
-        }
-        #restaurant{
-            width: 90%;
-            height: 90%;
-        }
         .navbar-custom { 
             background-color: #5d001e; 
+        }        
+        .jumbotron{
+            background-color: #e3afbc;
+            color: #5d001e;
+            font-size: 30px;
+            /* background-color:transparent !important; */
+        }
+        .container{
+            margin-top: 150px;
         }
     </style>
 </head>
@@ -54,37 +53,11 @@
             </ul>
         </div>
     </nav>
-    <div class="container text-center" id="card">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-786355,resizemode-1,msid-70709213/1200-restaurants-delist-themselves-from-dine-in-programmes-of-zomato-eazydiner-others-across-india.jpg" alt="My image" id="restaurant">
-            </div>
-            <div class="col-md-8">
-                <div class="jumbotron">
-                    <h1 class="display-5">Shradha Hotel</h1>
-                    <p class="lead">Kalwa</p>
-                    <hr class="my-2">
-                    <p>Authentic Indian and Chinese cuisine</p>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center">
-            <div class="jumbotron">
-                <h1 class="display-3">Popular cuisines</h1>
-                <ul class="lead">
-                    <p>Special Veg Thali</p>
-                    <p>Triple Fried Rice</p>
-                    <p>Paneer Masala</p>
-                    <p>Hakka Schezwan Noodles</p>
-                </ul>
-                <hr class="my-2">
-                <div style="display: inline-block;">
-                    <h1><a href="{% url 'zomato:order' %}">ORDER NOW</a></h1>
-                    <h1><a href="{% url 'zomato:review' %}">WRITE A REVIEW</a></h1>
-                </div>
-            </div>
+    <div class="container-fluid text-center">
+        <div class="jumbotron text-center">
+            <h1>Your review has been received successfully</h1>
+            <h3>Thank You for sharing your valuable feedback with us</h3>
         </div>
     </div>
-
 </body>
 </html>
